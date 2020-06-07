@@ -4,15 +4,16 @@
 
 {% set clang_version = [5, 0, 0] %}
 {% set cling_version = "0.6" %}
-{% set cling_version_nighlty = "0.7" %}
+{% set cling_version_nighlty = "0.6" %}
+{% set commit = "1112e4b" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/QuantStack/xeus-cling/archive/{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}-{{ commit }}.tar.gz
+  url: https://github.com/QuantStack/xeus-cling/archive/master.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -39,7 +40,7 @@ requirements:
     - llvmdev {{ clang_version[0] }}
     - clangdev {{ clang_version|join('.') }}
     - clang_variant * cling_v{{ cling_version }}
-    - cling {{ cling_version_nighlty }}
+    - cling-nightly {{ cling_version_nighlty }}
   run:
     # Even though cppzmq, xtl and nlohmann_json are header-only,
     # they are used at runtime by the c++ interpreter.
