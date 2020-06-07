@@ -1,4 +1,4 @@
-{% set name = "xeus-cling-nighlty" %}
+{% set name = "xeus-cling" %}
 {% set version = "0.9.0" %}
 {% set sha256 = "b3c6f00149f9d03547e5bb20eea7ed1d066bb4f9c44535a334400ca380427b84" %}
 
@@ -40,7 +40,7 @@ requirements:
     - llvmdev {{ clang_version[0] }}
     - clangdev {{ clang_version|join('.') }}
     - clang_variant * cling_v{{ cling_version }}
-    - cling-nightly {{ cling_version_nighlty }}
+    - cling {{ cling_version_nighlty }}
   run:
     # Even though cppzmq, xtl and nlohmann_json are header-only,
     # they are used at runtime by the c++ interpreter.
