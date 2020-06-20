@@ -19,5 +19,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: /usr/share/miniconda/conda-bld/linux-64/ 
-    artifactName: 'ensmallen'
+    artifactName: 'xeus-cling'
   displayName: 'Publish artifacts'
