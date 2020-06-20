@@ -1,20 +1,17 @@
 {% set name = "xeus-cling" %}
 {% set version = "0.9.0" %}
-{% set sha256 = "bf63927bb28ddbc0d1f81376ccb0de01c17a9f5c964b73274c3f8f01dcd5af69" %}
 
 {% set clang_version = [5, 0, 0] %}
 {% set cling_version = "0.6" %}
 {% set cling_version_nighlty = "0.6" %}
-{% set commit = "1112e4b" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}-{{ commit }}.tar.gz
   url: https://github.com/QuantStack/xeus-cling/archive/master.tar.gz
-  sha256: {{ sha256 }}
+  sha256: bf63927bb28ddbc0d1f81376ccb0de01c17a9f5c964b73274c3f8f01dcd5af69
 
 build:
   number: 0
