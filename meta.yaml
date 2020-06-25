@@ -12,7 +12,8 @@ package:
 source:
   url: https://github.com/QuantStack/xeus-cling/archive/master.tar.gz
   sha256: bf63927bb28ddbc0d1f81376ccb0de01c17a9f5c964b73274c3f8f01dcd5af69
-
+  patches:
+    - patches/openmp.patch
 build:
   number: 0
   # Cling has not been built for windows yet

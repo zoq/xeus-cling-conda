@@ -1,0 +1,39 @@
+diff --git share/jupyter/kernels/xcpp11/kernel.json.in share/jupyter/kernels/xcpp11/kernel.json.in
+index 17097f6..2107f0d 100644
+--- share/jupyter/kernels/xcpp11/kernel.json.in
++++ share/jupyter/kernels/xcpp11/kernel.json.in
+@@ -4,7 +4,7 @@
+       "@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_BINDIR@/xcpp",
+       "-f",
+       "{connection_file}",
+-      "-std=c++11"
++      "-std=c++11", "-fopenmp"
+   ],
+   "language": "C++11"
+ }
+diff --git share/jupyter/kernels/xcpp14/kernel.json.in share/jupyter/kernels/xcpp14/kernel.json.in
+index 91c1f39..ddc1d56 100644
+--- share/jupyter/kernels/xcpp14/kernel.json.in
++++ share/jupyter/kernels/xcpp14/kernel.json.in
+@@ -4,7 +4,7 @@
+       "@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_BINDIR@/xcpp",
+       "-f",
+       "{connection_file}",
+-      "-std=c++14"
++      "-std=c++14", "-fopenmp"
+   ],
+   "language": "C++14"
+ }
+diff --git share/jupyter/kernels/xcpp17/kernel.json.in share/jupyter/kernels/xcpp17/kernel.json.in
+index 99c2f95..0b68e38 100644
+--- share/jupyter/kernels/xcpp17/kernel.json.in
++++ share/jupyter/kernels/xcpp17/kernel.json.in
+@@ -4,7 +4,7 @@
+       "@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_BINDIR@/xcpp",
+       "-f",
+       "{connection_file}",
+-      "-std=c++17"
++      "-std=c++17", "-fopenmp"
+   ],
+   "language": "C++17"
+ }
